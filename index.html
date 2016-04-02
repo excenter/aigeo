@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        #map { height: 600px; width:40%; }
-    </style>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -18,21 +15,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,400italic" rel="stylesheet" type="text/css">
-
+    <style>
+      #map { height: 600px; width:40%; }
+    </style>
 </head>
 <body style="background-color:#ddd; background-size: cover;">
   <h1>WORDS</h1>
   <app-body></app-body>
   <div id='map'></div>
-  <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmV3YmF0eiIsImEiOiJjaW1pajlhdXowMGNtdXlrdTNtaDByY3R3In0.aRKPHYn4_EDUrmcYxZ0Wgw';
-  var map = new mapboxgl.Map({
-      container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-      center: [-74.50, 40], // starting position
-      zoom: 9 // starting zoom
-  });
-  </script>
+  <script src='map.js'></script>
 </body>
 
 </html>
