@@ -2,11 +2,11 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmV3YmF0eiIsImEiOiJjaW1pajlhdXowMGNtdXlrd
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-    center: [-74.50, 40], // starting position
-    zoom: 9 // starting zoom
+    center: [0, 0], // starting position
+    zoom: 1 // starting zoom
 });
 map.on('load', function() {
-  map.addSource({
+  map.addSource('markers', {
     type: 'geojson',
     data: {
       "type": "Feature",
@@ -31,5 +31,5 @@ map.on('load', function() {
         "text-offset": [0, 0.6],
         "text-anchor": "top"
     }
-  });  
+  });
 });
