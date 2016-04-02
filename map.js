@@ -2,8 +2,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmV3YmF0eiIsImEiOiJjaW1pajlhdXowMGNtdXlrd
 var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-    center: [0, 0], // starting position
-    zoom: 1 // starting zoom
+    center: [-77.03238901390978, 38.913188059745586], // starting position
+    zoom: 4 // starting zoom
 });
 map.on('load', function() {
   map.addSource('markers', {
@@ -15,7 +15,7 @@ map.on('load', function() {
           "coordinates": [-77.03238901390978, 38.913188059745586]
       },
       "properties": {
-          "title": "Mapbox DC",
+          "title": "my markers",
           "marker-symbol": "monument"
       }
     }
