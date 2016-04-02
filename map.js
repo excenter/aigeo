@@ -3,7 +3,7 @@ var map = new mapboxgl.Map({
     container: 'map', // container id
     style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
     center: [-77.03238901390978, 38.913188059745586], // starting position
-    zoom: 4 // starting zoom
+    zoom: 8 // starting zoom
 });
 map.on('load', function() {
   map.addSource('markers', {
