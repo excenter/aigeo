@@ -5,6 +5,11 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>aiGeo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.16.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map { position:absolute; top:0; bottom:0; width:40%; }
+    </style>
     <script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -18,5 +23,16 @@
 <body style="background-color:#ddd; background-size: cover;">
   <h1>WORDS</h1>
   <app-body></app-body>
+  <div id='map'></div>
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmV3YmF0eiIsImEiOiJjaW1pajlhdXowMGNtdXlrdTNtaDByY3R3In0.aRKPHYn4_EDUrmcYxZ0Wgw';
+  var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
+      center: [-74.50, 40], // starting position
+      zoom: 9 // starting zoom
+  });
+  </script>
 </body>
+
 </html>
