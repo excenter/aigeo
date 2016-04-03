@@ -52,7 +52,8 @@
   ];
 
   var mapGeo = L.mapbox.map('map_geo', 'mapbox.dark')
-    .setView([37.8, -96], 4);
+    .setView([-122.413682,37.775408], 8);
+
 
   var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
 </script>
