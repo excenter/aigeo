@@ -1,17 +1,13 @@
-<!-- Andrew Batz made this shit -->
 <!DOCTYPE html>
-<html lang="en" ng-app="aigeo" xmlns="http://www.w3.org/1999/html">
-<head>
-    <meta charset="utf-8" >
-    <title>aiGeo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.2.min.js"   integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
-    <script scr="./angular-leaflet-directive.js"></script>
+<html ng-app="demoapp">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="../dist/angular-leaflet-directive_dev_mapped.js"></script>
+    <link rel="stylesheet" href="../bower_components/leaflet/dist/leaflet.css" />
     <script>
-        var app = angular.module("aigeo", ["leaflet-directive"]);
+        var app = angular.module("demoapp", ["leaflet-directive"]);
         app.controller('MarkersSimpleController', [ '$scope', function($scope) {
             var mainMarker = {
                 lat: 51,
@@ -49,18 +45,14 @@
 
         } ]);
     </script>
-    <link rel="stylesheet" type="text/css" href="./bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
-</head>
-<body ng-controller="MarkersSimpleController">
-  <!-- <leaflet lf-center="london" markers="markers" height="480px" width="100%"></leaflet> EVENTS WILL STILL FIRE but all will for each directive-->
-  <!-- NOTICE events attribute is optional it is more for options in whitelisting (enable), blacklisting (disable), and logic (emit or broadcast)  -->
-  <leaflet lf-center="london" event-broadcast="events" markers="markers" height="480px" width="100%"></leaflet>
-  <h1>Markers simple example</h1>
-  <p>Initial marker position (lat/lng): <strong ng-bind="markers.mainMarker.lat"></strong> / <strong ng-bind="markers.mainMarker.lng"></strong></p>
-  <p>Actual marker position (lat/lng): <strong  ng-bind="position.lat"></strong> / <strong ng-bind="position.lng"></strong></p>
-  </p>
-</body>
-
+  </head>
+  <body ng-controller="MarkersSimpleController">
+    <!-- <leaflet lf-center="london" markers="markers" height="480px" width="100%"></leaflet> EVENTS WILL STILL FIRE but all will for each directive-->
+    <!-- NOTICE events attribute is optional it is more for options in whitelisting (enable), blacklisting (disable), and logic (emit or broadcast)  -->
+    <leaflet lf-center="london" event-broadcast="events" markers="markers" height="480px" width="100%"></leaflet>
+    <h1>Markers simple example</h1>
+    <p>Initial marker position (lat/lng): <strong ng-bind="markers.mainMarker.lat"></strong> / <strong ng-bind="markers.mainMarker.lng"></strong></p>
+    <p>Actual marker position (lat/lng): <strong  ng-bind="position.lat"></strong> / <strong ng-bind="position.lng"></strong></p>
+    </p>
+  </body>
 </html>
