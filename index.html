@@ -11,7 +11,6 @@
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
     <script src="./app.js"></script>
     <script src="directives/app-body.js"></script>
-    <script src="directives/map.js"></script>
     <link rel="stylesheet" type="text/css" href="./bootstrap.css">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,400italic" rel="stylesheet" type="text/css">
@@ -32,31 +31,7 @@
     </div>
   </div>
 
-<script>
-  L.mapbox.accessToken = 'pk.eyJ1IjoiYW5kcmV3YmF0eiIsImEiOiJjaW1pajlhdXowMGNtdXlrdTNtaDByY3R3In0.aRKPHYn4_EDUrmcYxZ0Wgw';
-  var geojson = [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-77.031952,38.913184]
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [-122.413682,37.775408]
-      }
-    }
-  ];
-
-  var mapGeo = L.mapbox.map('map_geo', 'mapbox.dark')
-    .setView([-77.031952,38.913184], 10);
-
-
-  var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
-</script>
+<script src="directives/map.js"></script>
 </body>
 
 </html>
