@@ -17,8 +17,8 @@ var geojson = [
 ];
 
 var mapGeo = L.mapbox.map('map_geo', 'mapbox.light').setView([-77.031952,38.913184], 10);
-// console.log('banana');
+console.log('banana');
 var myLayer = L.mapbox.featureLayer().setGeoJSON(geojson).addTo(mapGeo);
-// scope.banan = function() {
-//   console.log(scope.winnipeg);
-// };
+scope.banan = function() {
+  console.log(scope.winnipeg);
+};
